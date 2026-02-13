@@ -49,9 +49,8 @@
 	  (masked-magenta     "#897399")
 	  (masked-cyan        "#518a8a")
 
-	  (masked-fg          "#bbbbbb")
-	  (masked-fg-1        "#969696")
-	  (masked-fg-2        "#696969")
+	  (masked-fg          "#ffffff")
+	  (masked-code        "#969696")
 
 	  (masked-blue-alt    "#004daa")
 	  (masked-magenta-alt "#c617e6")
@@ -59,7 +58,6 @@
 	  (masked-gold        "#ffd700")
 	  (masked-black       "#000000")
  	  (masked-gray        "#121212")
-	  (masked-white       "#ffffff")
 
 	  ;; disable bold/italic change them to 'normal'
 	  (bold               'bold)
@@ -108,8 +106,8 @@
    `(cursor ((t (:background ,masked-gold))))
    `(default ((t (:foreground ,masked-fg :background ,masked-bg))))
    `(fringe ((t (:foreground ,masked-fg :background ,masked-bg))))
-   `(minibuffer-prompt ((t (:foreground ,masked-white))))
-   `(region ((t (:foreground ,masked-white :background ,masked-ws))))
+   `(minibuffer-prompt ((t (:foreground ,masked-fg))))
+   `(region ((t (:foreground ,masked-fg :background ,masked-ws))))
    `(link ((t (:foreground ,masked-magenta-alt :underline t))))
    `(link-visited ((t (:foreground ,masked-magenta :underline t))))
 
@@ -117,20 +115,21 @@
    `(highlight-numbers-number ((t (:foreground ,masked-red))))
 
    ;; line-numbers
-   `(line-number ((t (:inherit default :foreground ,masked-fg-1 :background ,masked-bg-alt))))
-   `(line-number-current-line ((t (:inherit line-number :foreground ,masked-fg-2 :background ,masked-bg-alt
+   `(line-number ((t (:inherit default :foreground ,masked-code :background ,masked-bg-alt))))
+   `(line-number-current-line ((t (:inherit line-number :foreground ,masked-gold :background ,masked-bg-alt
 											:weight ,bold))))
 
    ;; mode-line
    `(mode-line-active ((t (:foreground ,masked-fg :background ,masked-gray :slant ,italic))))
-   `(mode-line-inactive ((t (:foreground ,masked-fg-1 :background ,masked-bg+01 :slant ,italic))))
+   `(mode-line-inactive ((t (:foreground ,masked-code :background ,masked-bg+01 :slant ,italic))))
    `(mode-line-buffer-id ((t (:slant ,italic))))
 
    ;; org
    `(org-date ((t (:foreground ,masked-blue :background ,masked-bg))))
-   `(org-hide ((t (:foreground ,masked-fg-1 :background ,masked-bg))))
+   `(org-hide ((t (:foreground ,masked-code :background ,masked-bg))))
    `(org-todo ((t (:foreground ,masked-red :background ,masked-bg))))
    `(org-done ((t (:foreground ,masked-green :background ,masked-bg))))
+   `(org-block ((t (:foreground , masked-code, :background, masked-bg))))
    `(org-headline-done ((t (:inherit org-done))))
    `(org-level-1 ((t (:foreground ,masked-red :background ,masked-bg))))
    `(org-level-2 ((t (:foreground ,masked-magenta :background ,masked-bg))))
@@ -141,12 +140,12 @@
    `(org-level-7 ((t (:foreground ,masked-bg+3 :background ,masked-bg))))
 
    ;; powerline
-   `(powerline-active0 ((t (:foreground ,masked-white  :background ,masked-bg+1))))
-   `(powerline-active1 ((t (:foreground ,masked-white :background ,masked-bg-alt))))
-   `(powerline-active2 ((t (:foreground ,masked-white :background ,masked-bg-alt))))
-   `(powerline-inactive0 ((t (:foreground ,masked-fg-1  :background ,masked-bg-alt))))
-   `(powerline-inactive1 ((t (:foreground ,masked-fg-1 :background ,masked-bg-alt))))
-   `(powerline-inactive2 ((t (:foreground ,masked-fg-1 :background ,masked-bg-alt))))
+   `(powerline-active0 ((t (:foreground ,masked-fg  :background ,masked-bg+1))))
+   `(powerline-active1 ((t (:foreground ,masked-fg :background ,masked-bg-alt))))
+   `(powerline-active2 ((t (:foreground ,masked-fg :background ,masked-bg-alt))))
+   `(powerline-inactive0 ((t (:foreground ,masked-code  :background ,masked-bg-alt))))
+   `(powerline-inactive1 ((t (:foreground ,masked-code :background ,masked-bg-alt))))
+   `(powerline-inactive2 ((t (:foreground ,masked-code :background ,masked-bg-alt))))
 
    ;; whitespace
    `(whitespace-space ((t (:foreground ,masked-ws :background ,masked-bg ))))

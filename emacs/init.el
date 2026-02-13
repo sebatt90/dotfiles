@@ -34,11 +34,6 @@
 	company
 	smex
 	
-	;; themes and customization
-	spacemacs-theme
-	doom-modeline
-	nerd-icons
-
 	;; other
 	ox-hugo
 	))
@@ -60,7 +55,6 @@
 
 ;; theme
 (load "~/.emacs.d/masked-theme")
-
 (load-theme 'masked t)
       
 ;; smex
@@ -73,38 +67,6 @@
 
 ;; setup multiple cursors
 (require 'multiple-cursors)
-
-;; (use-package rust-mode
-;;   :defer t
-;;   :init (require 'rust-mode))
-
-;; (use-package magit
-;;   :defer t
-;;   :init (require 'magit))
-
-;; (use-package spacemacs-theme
-;;   :defer t
-;;   :init (load-theme 'spacemacs-dark t))
-
-;; (use-package nerd-icons
-;;   ;; :custom
-;;   ;; The Nerd Font you want to use in GUI
-;;   ;; "Symbols Nerd Font Mono" is the default and is recommended
-;;   ;; but you can use any other Nerd Font if you want
-;;   ;; (nerd-icons-font-family "Symbols Nerd Font Mono")
-;;   )
-
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :init (doom-modeline-mode 1))
-
-;; (use-package ox-hugo
-;;   :ensure t   ;Auto-install the package from Melpa
-;;   :pin melpa  ;`package-archives' should already have ("melpa" . "https://melpa.org/packages/")
-;;   :after ox)
-
-;; (with-eval-after-load 'ox
-;;   (require 'ox-hugo))
 
 ;; setup rust mode
 (require 'rust-mode)

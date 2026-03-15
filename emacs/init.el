@@ -33,6 +33,7 @@
 	multiple-cursors
 	company
 	smex
+	yasnippet
 	
 	;; other
 	ox-hugo
@@ -64,6 +65,10 @@
 
 ;; setup company mode
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;; setup multiple cursors
 (require 'multiple-cursors)

@@ -34,6 +34,8 @@
 	company
 	smex
 	yasnippet
+	svelte-mode
+	markdown-mode
 	
 	;; other
 	ox-hugo

@@ -14,8 +14,10 @@
 
 (require 'org)
 
+;; org setup
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
-
+;; (require 'ob-latex)
+;; (setq org-latex-compiler "lualatex")
 (setq org-startup-truncated 'nil)
 
 (require 'package)
@@ -98,26 +100,26 @@
 ;; function def ;;
 (defun my/paste-from-clipboard ()
   (interactive)
-  (setq x-select-enable-clipboard t)
-  (yank)
-  (setq x-select-enable-clipboard nil))
+  (insert (gui-get-selection 'CLIPBOARD)))
 
 (defun my/copy-to-clipboard ()
   (interactive)
-  (setq x-select-enable-clipboard t)
-  (kill-ring-save (region-beginning) (region-end))
-  (setq x-select-enable-clipboard nil))
+  (gui-set-selection 'CLIPBOARD 
+		     (buffer-substring-no-properties (region-beginning) (region-end))))
 
 (defun rvbuf ()
   "Revert buffer without confirmation."
   (interactive)
   (revert-buffer :ignore-auto :noconfirm))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(company go-mode magit markdown-mode multiple-cursors ox-hugo
+	     rust-mode smex svelte-mode yasnippet yasnippet-snippets)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

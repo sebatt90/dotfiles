@@ -1,0 +1,17 @@
+{
+    "name": "Sebatt Theme",
+    "primary": "#ffd700",
+    "outline": "#496f94",
+    "surfaceVariant": "#496f94",
+    "surface": "#232323",
+    "surfaceContainer": "#232323",
+    "surfaceContainerHigh": "#232323",
+    "surfaceContainerHighest": "#232323",
+    "background": "#232323",
+    "primaryText": "#ffffff",
+    "surfaceText": "#ffffff",
+    "surfaceVariantText": "#ffffff",
+    "backgroundText": "#ffffff",
+    "outline": "#232323",
+    "matugen_type": "scheme-tonal-spot"
+}

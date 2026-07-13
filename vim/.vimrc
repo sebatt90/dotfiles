@@ -27,6 +27,10 @@ vnoremap <C-c>w "+y
 nnoremap <C-c>y "+p
 inoremap <C-c>y <C-r>+
 
+" Simple split
+noremap <C-x>2 :split<CR>
+noremap <C-x>3 :vsplit<CR>
+
 " Searching
 nnoremap / /\v
 vnoremap / /\v

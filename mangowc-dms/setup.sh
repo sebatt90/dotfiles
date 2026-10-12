@@ -8,4 +8,4 @@ ln -sf $DOTFILES/dms/settings.json $CONFIG/DankMaterialShell/settings.json
 ln -sf $DOTFILES/dms/themes/sebatttheme.json $CONFIG/DankMaterialShell/themes/sebatttheme.json
 ln -sf $DOTFILES/gtk/3.0/settings.ini $CONFIG/gtk-3.0/settings.ini
 ln -sf $DOTFILES/gtk/4.0/settings.ini $CONFIG/gtk-4.0/settings.ini
-ln -sf $DOTFILES/xdg-portal/portals.conf $CONFIG/xdg-desktop-portal/portals.conf
+ln -sf $DOTFILES/xdg-portal/portals.conf $CONFIG/xdg-desktop-portal/mango-portals.conf

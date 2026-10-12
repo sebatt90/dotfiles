@@ -16,10 +16,15 @@ export GPG_TTY=$(tty)
 #
 #RESET="\[$(tput sgr0)\]"
 
+# TEMP
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export WLR_NO_HARDWARE_CURSORS=1
+
 # settings
 set EDITOR = nvim
 # aliases
-alias uni="cd ~/Documenti/uni"
+alias uni="cd ~/Documenti/uni && tmux new -s uni"
 
 
 # PS1='[\[\e[96;1m\]\u\[\e[39m\]@\H\[\e[0m\]:\w]\\$ '

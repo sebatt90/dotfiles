@@ -6,7 +6,6 @@ set relativenumber
 set smartindent
 set autoindent
 set clipboard=unnamed
-set notermguicolors
 
 " set syntax highlight
 syntax on

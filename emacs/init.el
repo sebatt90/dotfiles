@@ -40,6 +40,7 @@
 	yasnippet
 	svelte-mode
 	markdown-mode
+	haskell-mode
 	
 	;; other
 	ox-hugo
@@ -81,6 +82,12 @@
 
 ;; setup rust mode
 (require 'rust-mode)
+
+;; setup haskell mode
+(require 'haskell-mode)
+
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
 
 ;; setup magit
 (require 'magit)
